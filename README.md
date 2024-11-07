@@ -1,16 +1,15 @@
 # PersonalizedInfectionProbabilityCalculator
 
-Our primary goal is for the user to input their specific factors such as age, disease type, environmental conditions, etc to receive a risk estimation for the infection. 
-This will help users to understand how personal and eviromental factors can affect their probalities for transmissible diseases. 
+The main goal of our project is that users understand their risk levels for many transmissible diseases based on personal and enviromental factors. Users will input their specific details such as age, gender, and any pre-existing conditios, taking into consideration environmental conditions and the disease type to receive a risk estimation for the infection. This tool will help users to make informed health desicions by showing them how their unique circumstances can inmpact their likelihood of infection. 
 
-The main five object that we will usea to calculate de infection risk. 
+The main five objects that we will use to calculate de infection risk. 
 1. User. (the person using the calculator)
    The attributes will be:
    a) age
    b) gender
    c) an pre-existing health condition
    d) vaccines
-2. Disease. (Characterisitcs of the disease)
+2. Disease. (Characteristics of the disease)
    The atribbutes will be:
    a) name
    b) probality of transmission
