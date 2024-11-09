@@ -2,6 +2,14 @@
 
 The main goal of our project is that users understand their risk levels for many transmissible diseases based on personal and enviromental factors. Users will input their specific details such as age, gender, and any pre-existing conditios, taking into consideration environmental conditions and the disease type to receive a risk estimation for the infection. This tool will help users to make informed health desicions by showing them how their unique circumstances can inmpact their likelihood of infection. 
 
+to estimate the infection risk i will use a foundational formula that incorparates the key attributes from the user, enviromental foctors, and disease characteristics. 
+Risk Calculator = (user) * (risk factor) * (disease) 
+where 
+user = (age + preexistng_condtions - vaccines) 
+risk factor = (climate + population + hygene) 
+disease = (trans_probability + severity + trans_method + mutation + antibiotic_resietance)
+
+
 The main five objects that we will use to calculate de infection risk. 
 1. User. (the person using the calculator)
    The attributes will be:
