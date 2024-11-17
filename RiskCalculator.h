@@ -1,7 +1,8 @@
-#ifndef CAR_H
-#define CAR_H
+#ifndef RISKCALCULATOR_H
+#define RISKCALCULATOR_H
 
 #include <string>
+
 #include "user.h"
 #include "Disease.h"
 #include "RiskFactor.h"
@@ -14,10 +15,10 @@ class RiskCalculator{
         double base_risk; 
     public: 
         // Constructor 
-        RiskCalculator(const User& use, const Disease& dise, const RiskFactor& riskfact)
-            :user(use), disease(dise), riskfactor(riskfact), base_risk(0.0){}
-        void start();
-        void stop(); 
+        RiskCalculator(const User& use, const Disease& Disease, const RiskFactor& riskFactor);
+        void setBaseRisk(double risk);
+        double getBaseRisk() const; 
+        double calculateRisk();
            
 }; 
 #endif 
