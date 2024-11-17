@@ -22,7 +22,7 @@ class User{
         //Getters 
         int getAge() const;
         std::string getGender() const; 
-        bool hasPre_Exisitng_Cond() const; 
+        bool hasPre_Existing_Cond() const; 
         bool hasVaccines() const; 
 
 };
