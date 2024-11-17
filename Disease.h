@@ -28,3 +28,4 @@ class Disease{
         std::string displayInfo() const;
 }; 
 #endif
+
