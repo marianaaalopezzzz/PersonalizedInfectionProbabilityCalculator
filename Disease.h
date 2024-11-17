@@ -1,33 +1,30 @@
+#ifndef DISEASE_H
+#define DISEASE_H
+
 #include <string>
 class Disease{
     private: 
         std::string name;
-        double trans_prob;
+        double transmission_prob;
         int severity;
-        std::string trans_method;
+        std::string transmission_method;
     public: 
         // Constructor 
-        Disease(const std::string& name, double trans_prob, int severity, const std::string& trans_method)
-            :name(name), trans_prob(trans_prob), severity(severity), trans_method(trans_method){}
-            
+        Disease(const std::string& name, double transmission_prob, int severity, const std::string& transmission_method);
+
+        //Setters 
+        void setName(const std::string& name);
+        void setTransmission_Prob(double transmission_probability);
+        void setSeverity(int severity);
+        void setTransmission_Method(const std::string& transmission_method); 
+
+        //Getters
+        std::string getName() const; 
+        double getTransmissin_Prob() const; 
+        int getSeverity() const; 
+        std::string getTransmission_Method() const;
+
+        //Display Information 
+        std::string displayInfo() const;
 }; 
-
-class Virus : public Disease {
-    private:
-        double mutation;
-    public:
-        // Constructor
-        Virus(const std::string& name, double trans_prob, int severity, const std::string& trans_method, double mutation)
-            : Disease(name, trans_prob, severity, trans_method), mutation(mutation){}
-
-};
-
-class Bacteria : public Disease {
-    private:
-        bool antibiotic_resistance;
-    public:
-        // Constructor
-        Bacteria(const std::string& name, double trans_prob, int severity, const std::string& trans_method, bool antibiotic_resistance)
-            : Disease(name, trans_prob, severity, trans_method), antibiotic_resistance(antibiotic_resistance){}
-
-};
+#endif
