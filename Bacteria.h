@@ -8,6 +8,6 @@ private:
     bool antibiotic_resistance;
 public:
     // Constructor
-    Bacteria(const std::string& name, double trans_prob, int severity, const std::string& trans_method, bool antibiotic_resistance);
+    Bacteria(const std::string& name, double transmission_prob, int severity, const std::string& transmission_method, bool antibiotic_resistance);
 };
 #endif 
