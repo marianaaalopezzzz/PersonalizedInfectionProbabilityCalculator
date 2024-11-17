@@ -7,23 +7,21 @@
 class Report : public RiskCalculator {
     private: 
         double final_calculated_probability;          
-        std::string summary_and_recommendations;       
+        std::string summary;       
+        std::string recommendations;
     public: 
         // Constructor
-        Report(const User& user, const Disease& disease, const RiskFactor& riskFactor)
-            : RiskCalculator(user, disease, riskFactor), final_calculated_probability(0.0), summary_and_recommendations("") {}
+        Report(const User& user, const Disease& disease, const RiskFactor& riskFactor, double probability, const std::string& summary, const std::string& recommendations);
+
+        // Setters 
+        void setFinal_Calculated_Probability(double final_calculated_probability);
+        void setSummary(const std::string& summary);    
+        void setRecommendations(const std::string& recommendations);
+
+        //Getters 
+        double getFinal_Calculated_Probability() const;
+        std::string getSummary() const;
+        std::string getRecommendations() const;
         
-        void generateReport(double final_probability, const std::string& summary) {
-            final_calculated_probability = final_probability; 
-            summary_and_recommendations = summary;          
-        }
-
-        double getFinalProbability() const {
-            return final_calculated_probability;
-        }
-
-        std::string getSummary() const {
-            return summary_and_recommendations;
-        }
 };
 #endif
