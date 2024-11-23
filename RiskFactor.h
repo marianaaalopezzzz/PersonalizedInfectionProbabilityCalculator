@@ -7,20 +7,20 @@ class RiskFactor{
     private: 
         std::string climate;
         int population;
-        int hygene_level;
+        int hygiene_level;
     public: 
         // Constructor 
-        RiskFactor(const std::string& climate, int population, int hygene);
+        RiskFactor(std::string climate, int population, int hygiene);
         
         //Setters  
-        void setClimate(const std::string& climate); 
+        void setClimate(std::string climate); 
         void setPopulation(int population);
-        void setHygene_Level(int hygene);
+        void setHygiene_Level(int hygiene);
 
         //Getters 
-        std::string getClimate() const;
-        int getPopulation() const;
-        int getHygiene_Level() const;
+        std::string getClimate();
+        int getPopulation();
+        int getHygiene_Level();
 }; 
 
 #endif
