@@ -1,6 +1,5 @@
 # PersonalizedInfectionProbabilityCalculator
-
-The main goal of our project is that users understand their risk levels for many transmissible diseases based on personal and enviromental factors. Users will input their specific details such as age, gender, and any pre-existing conditios, taking into consideration environmental conditions and the disease type to receive a risk estimation for the infection. This tool will help users to make informed health desicions by showing them how their unique circumstances can inmpact their likelihood of infection. 
+The main goal of our project is that users understand their risk levels for many transmissible diseases based on personal and environmental factors. Users will input their specific details such as age, gender, and any pre-existing conditions, taking into consideration environmental conditions and the disease type to receive a risk estimation for the infection. This tool will help users to know their risk to contract a disease and take more hygienic measures.
 
 To estimate the infection risk i will use a foundational formula that incorparates the key attributes from the user, enviromental foctors, and disease characteristics. 
 
@@ -13,30 +12,25 @@ risk factor = (climate + population + hygene)
 
 disease = (trans_probability + severity + trans_method + mutation + antibiotic_resietance)
 
-<img width="626" alt="Captura de pantalla 2024-11-17 a la(s) 2 25 45 p m" src="https://github.com/user-attachments/assets/edea0c9c-4565-479b-ba4b-ca3ea38e64cc">
+<img width="670" alt="Captura de pantalla 2024-11-23 a la(s) 12 31 11 p m" src="https://github.com/user-attachments/assets/3e34b945-ceca-4b73-ac86-765649f9775f">
+
 
 The main five objects that we will use to calculate de infection risk. 
-1. User. (the person using the calculator)
-   The attributes will be:
-   a) age
-   b) gender
-   c) an pre-existing health condition
-   d) vaccines
-2. Disease. (Characteristics of the disease)
-   The atribbutes will be:
-   a) name
-   b) probality of transmission
-   c) disease's severity
-   d) Transmission Method
-3. RiskFactor. (externsl and eviromental factors that will affect)
-   The attributes will be:
-   a) climate such as humid, dry, or cold
-   b) number of peoble in the area
-   c) hygene level
-4. RiskCalculator. (final risk calculation (user, disease, and riskfactor))
-   The atr¡tribute will be:
-   a) the initial base risk
-5. Report. (Displays the information clarly for the user)
-   The attributes will be:
-   a) final calculated probability
-   b) summary of results with some recommendations. 
+User Class
+•	Attributes: age, gender, pre-existing conditions, vaccines
+•	Methods: setAge(), setGender(), etc.
+Disease Class
+•	Attributes: name, transmission probability, severity, transmission method
+•	Methods: setName(), setTransmissionProb(), displayInfo()
+RiskFactor Class
+•	Attributes: climate, population, hygiene level
+•	Methods: setClimate(), setPopulation(), setHygieneLevel()
+RiskCalculator Class
+•	Attributes: user, disease, riskFactor, baseRisk
+•	Methods: calculateRisk(), setBaseRisk(), etc.
+Report Class
+•	Attributes: finalCalculatedProbability, summary, recommendations
+•	Methods: setFinalCalculatedProbability(), getSummary(), etc.
+Bacteria and Virus Subclasses (derived from Disease)
+•	Inheritance: Bacteria and Virus inherit from Disease, adding specific attributes (antibiotic resistance for Bacteria, mutation rate for Virus).
+
