@@ -15,9 +15,12 @@ class RiskCalculator{
         double base_risk; 
     public: 
         // Constructor 
-        RiskCalculator(const User& use, const Disease& Disease, const RiskFactor& riskFactor);
+        RiskCalculator(User user, Disease disease, RiskFactor riskFactor);
+        //Setter
         void setBaseRisk(double risk);
-        double getBaseRisk() const; 
+        //Getter
+        double getBaseRisk(); 
+        //Calc Risk 
         double calculateRisk();
            
 }; 
