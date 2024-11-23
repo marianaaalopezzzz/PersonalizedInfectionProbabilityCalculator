@@ -2,30 +2,30 @@
 #define DISEASE_H
 
 #include <string>
+
 class Disease{
-    private: 
+    protected: 
         std::string name;
         double transmission_prob;
         int severity;
         std::string transmission_method;
     public: 
         // Constructor 
-        Disease(const std::string& name, double transmission_prob, int severity, const std::string& transmission_method);
+        Disease(std::string name, double transmission_prob, int severity,std::string transmission_method);
 
         //Setters 
-        void setName(const std::string& name);
+        void setName(std::string name);
         void setTransmission_Prob(double transmission_probability);
         void setSeverity(int severity);
-        void setTransmission_Method(const std::string& transmission_method); 
+        void setTransmission_Method(std::string transmission_method); 
 
         //Getters
-        std::string getName() const; 
-        double getTransmissin_Prob() const; 
-        int getSeverity() const; 
-        std::string getTransmission_Method() const;
+        std::string getName(); 
+        double getTransmission_Prob(); 
+        int getSeverity(); 
+        std::string getTransmission_Method();
 
         //Display Information 
-        std::string displayInfo() const;
+        std::string displayInfo();
 }; 
 #endif
-
