@@ -16,22 +16,83 @@ disease = (trans_probability + severity + trans_method + mutation + antibiotic_r
 <img width="820" alt="Captura de pantalla 2024-11-23 a la(s) 2 03 09 p m" src="https://github.com/user-attachments/assets/218a48c2-8ef1-4491-99e4-19ac767bf29b">
 
 
-The main five objects that we will use to calculate de infection risk. 
-User Class
-•	Attributes: age, gender, pre-existing conditions, vaccines
-•	Methods: setAge(), setGender(), etc.
-Disease Class
-•	Attributes: name, transmission probability, severity, transmission method
-•	Methods: setName(), setTransmissionProb(), displayInfo()
-RiskFactor Class
-•	Attributes: climate, population, hygiene level
-•	Methods: setClimate(), setPopulation(), setHygieneLevel()
-RiskCalculator Class
-•	Attributes: user, disease, riskFactor, baseRisk
-•	Methods: calculateRisk(), setBaseRisk(), etc.
-Report Class
-•	Attributes: finalCalculatedProbability, summary, recommendations
-•	Methods: setFinalCalculatedProbability(), getSummary(), etc.
-Bacteria and Virus Subclasses (derived from Disease)
-•	Inheritance: Bacteria and Virus inherit from Disease, adding specific attributes (antibiotic resistance for Bacteria, mutation rate for Virus).
+The main five objects and the subclasses that we will use to calculate de infection risk. 
+User Class: stores personal information that will affect the infection risk
+•	Attributes: 
+a)	age 
+b)	gender
+c)	pre-existing conditions
+d)	vaccines
+
+•	Methods: 
+a)	User (int, string, bool, bool) --- this initializes user details
+b)	getAge()
+c)	getGender()
+d)	hasPre_Existing_Cond()
+e)	hasVaccines()
+
+Disease Class: Defines essential properties that will impact its spread
+•	Attributes: 
+a)	name
+b)	transmission_prob
+c)	severity
+d)	transmission_method
+
+•	Methods: 
+a)	Disease(name, transmission_prob, severity, transmission_method) --- initializes disease details 
+b)	getName()
+c)	getTransmission_Prob()
+d)	getSeverity()
+e)	getTransmission_method()
+
+Bacteria subclass: Bacterial disease that is an extending form the Disease class by inheritance
+•	Attributes:
+a)	Antibiotic resitance
+
+•	Methods: 
+a)	Bacteria(name, transmission_prob, severity, transmission_method, antibiotic_resistance) --- initialize the bacteria with specific details 
+b)	hasAntibioticResistance() 
+
+Virus subclass: Adds virus-specific attributes and methods using also information from the disease class by inheritance 
+•	Attributes:
+a)	Mutation rate
+
+•	Methods: 
+a)	Virus(name, transmission_prob, severity, transmission_method, mutation, antiviral_resistance) 
+b)	getMutationRate()
+
+RiskFactor Class: Store factors that will influence the disease transmission in a environment 
+•	Attributes:
+a)	Climate
+b)	Population
+c)	hygiene level
+
+•	Methods: 
+a)	riskFactor(climate, population, hygene)
+b)	getClimate()
+c)	getPopulation()
+d)	getHygiene_Level()
+
+RiskCalculator Class: Calculates infection risk using User, Disease and RiskFactor by composition
+•	Attributes
+a)	baseRisk
+
+•	Methods: 
+a)	RiskCalculator(User, Disease, RiskFactor) --- calculates the risk based on user, disease, and riskFactor
+b)	getBaseRisk()
+c)	calculateRisk() --- initialize base risk 
+
+Report Class: Summarizes the risk calculation and give recommendations by composition
+•	Attributes:
+a)	final_calculated_probability
+b)	summary
+c)	recommendations
+
+•	Methods: 
+a)	Report(User, Disease, RiskFactor, RiskCalculator, probability, summary, recommendations) --- initialize the report with the final probability
+b)	getFinal_Calculated_Probability(), 
+c)	getSummary()
+d)	getRecommendations()
+
+
 
