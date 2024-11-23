@@ -12,7 +12,8 @@ risk factor = (climate + population + hygene)
 
 disease = (trans_probability + severity + trans_method + mutation + antibiotic_resietance)
 
-<img width="670" alt="Captura de pantalla 2024-11-23 a la(s) 12 31 11 p m" src="https://github.com/user-attachments/assets/3e34b945-ceca-4b73-ac86-765649f9775f">
+
+<img width="820" alt="Captura de pantalla 2024-11-23 a la(s) 2 03 09 p m" src="https://github.com/user-attachments/assets/218a48c2-8ef1-4491-99e4-19ac767bf29b">
 
 
 The main five objects that we will use to calculate de infection risk. 
