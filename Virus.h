@@ -8,6 +8,7 @@ private:
     double mutation;
 public:
     // Constructor
-    Virus(const std::string& name, double transmission_prob, int severity, const std::string& transmission_method, double mutation);
+    Virus(std::string name, double transmission_prob, int severity, std::string transmission_method, double mutation);
+    double getMutationRate(); 
 };
 #endif 
