@@ -2,26 +2,29 @@
 #define REPORT_H
 
 #include <string>
+
 #include "RiskCalculator.h"
 
-class Report : public RiskCalculator {
+
+class Report{
     private: 
+        RiskCalculator riskCalculator;
         double final_calculated_probability;          
         std::string summary;       
         std::string recommendations;
     public: 
         // Constructor
-        Report(const User& user, const Disease& disease, const RiskFactor& riskFactor, double probability, const std::string& summary, const std::string& recommendations);
+        Report(User user, Disease disease, RiskFactor riskFactor, double probability, std::string summary, std::string recommendations);
 
         // Setters 
         void setFinal_Calculated_Probability(double final_calculated_probability);
-        void setSummary(const std::string& summary);    
-        void setRecommendations(const std::string& recommendations);
+        void setSummary(std::string summary);    
+        void setRecommendations(std::string recommendations);
 
         //Getters 
-        double getFinal_Calculated_Probability() const;
-        std::string getSummary() const;
-        std::string getRecommendations() const;
+        double getFinal_Calculated_Probability();
+        std::string getSummary();
+        std::string getRecommendations();
         
 };
 #endif
